@@ -1,13 +1,16 @@
-<h2>连接数</h2>
+<h2>1.链接数</h2>
 <pre>
 # Clients
 connected_clients:926	
 </pre>
 
-<h2>内存</h2>
+<h2>2.QPS</h2>
+<p>Number	of	commands	processed:	total_commands_processed</p>
+
+<h2>3.内存使用（Memory Usage）</h2>
 <ul>
-	<li>当前使用内存：used_memory</li>
-	<li>历史最大使用内存：used_memory_peak</li>
+	<li>used_memory</li>
+	<li>used_memory_peak（峰值）</li>
 </ul>
 <pre>
 # Memory
@@ -21,9 +24,11 @@ mem_fragmentation_ratio:2.13
 mem_allocator:jemalloc-3.6.0	
 </pre>
 
-<h2>QPS</h2>
 
-<h2>db 中的 key 总数量（如：session）</h2>
+
+
+
+<h2>4.db 中的 key 总数量（如：session）</h2>
 <pre>
 # Keyspace
 db0:keys=26857,expires=26857,avg_ttl=782141	
@@ -32,5 +37,6 @@ db0:keys=26857,expires=26857,avg_ttl=782141
 <h2>参考文献</h2>
 <ul>
 	<li>https://www.datadoghq.com/blog/how-to-monitor-redis-performance-metrics/</li>
+	<li>http://www.mamicode.com/info-detail-891254.html</li>
 </ul>
 
