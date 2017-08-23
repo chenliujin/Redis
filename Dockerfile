@@ -9,4 +9,4 @@ COPY ./etc/redis/redis.conf /etc/redis/redis.conf
 
 VOLUME [ "/etc/redis", "/var/lib/redis" ]
 
-CMD [ "redis-server", "/etc/redis/redis.conf" ]
+ENTRYPOINT ["redis-server /etc/redis/redis.conf"]
