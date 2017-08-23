@@ -19,6 +19,10 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 6379
+        livenessProbe:
+          tcpSocket:
+            port: 6379
+          initialDelaySeconds: 10
         resources:
           limits:
             cpu: "0.1"
