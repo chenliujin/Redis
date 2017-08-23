@@ -1,4 +1,6 @@
 
+# 配置
+- 启用认证  
 
 # Clients
 - [phpredis](https://github.com/phpredis/phpredis)
