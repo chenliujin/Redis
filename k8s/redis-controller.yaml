@@ -14,9 +14,9 @@ spec:
         app: redis
     spec:
       volumes:
-        - name: redis-persistent-storage 
-          hostPath:
-            path: /var/redis 
+      - name: redis-persistent-storage 
+        hostPath:
+          path: /var/redis 
       containers:
       - name: redis
         image: registry.chenliujin.com:5000/redis:4.0.1
