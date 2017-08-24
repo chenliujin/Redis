@@ -13,6 +13,10 @@ spec:
       labels:
         app: redis
     spec:
+      volumes:
+        - name: redis-persistent-storage 
+          hostPath:
+            path: /var/redis 
       containers:
       - name: redis
         image: registry.chenliujin.com:5000/redis:4.0.1
@@ -26,6 +30,9 @@ spec:
         resources:
           limits:
             cpu: "0.1"
+        volumeMounts:
+          - name: redis-persistent-storage
+            mountPath: /var/redis
       imagePullSecrets:
       - name: registry.chenliujin.com
 
