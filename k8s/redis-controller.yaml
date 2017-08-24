@@ -16,7 +16,7 @@ spec:
       volumes:
       - name: redis-persistent-storage 
         hostPath:
-          path: /var/redis 
+          path: /var/redis/6379
       containers:
       - name: redis
         image: registry.chenliujin.com:5000/redis:4.0.1
@@ -32,7 +32,7 @@ spec:
             cpu: "0.1"
         volumeMounts:
           - name: redis-persistent-storage
-            mountPath: /var/redis
+            mountPath: /var/redis/6379
       imagePullSecrets:
       - name: registry.chenliujin.com
 
