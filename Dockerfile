@@ -2,11 +2,11 @@ FROM redis:4.0.1
 
 MAINTAINER chenliujin <liujin.chen@qq.com>
 
-RUN mkdir /var/lib/redis && \
-    chown redis:redis /var/lib/redis
+RUN mkdir -p /var/redis/6379 && \
+    chown -R redis:redis /var/redis
 
-COPY ./etc/redis/redis.conf /etc/redis/redis.conf
+COPY ./etc/redis /etc/redis
 
-VOLUME [ "/etc/redis", "/var/lib/redis" ]
+VOLUME [ "/etc/redis", "/var/redis" ]
 
-CMD ["redis-server", "/etc/redis/redis.conf"]
+CMD ["redis-server", "/etc/redis/6379.conf"]
