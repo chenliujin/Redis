@@ -35,4 +35,7 @@ spec:
             mountPath: /var/redis/6379
       imagePullSecrets:
       - name: registry.chenliujin.com
+      nodeSelector: 
+        node: k2 
+
 
