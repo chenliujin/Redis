@@ -19,7 +19,7 @@ spec:
           path: /var/redis/6379
       containers:
       - name: redis
-        image: registry.chenliujin.com:5000/redis:4.0.1
+        image: docker.io:5000/redis:4.0.9
         imagePullPolicy: Always
         ports:
         - containerPort: 6379
@@ -27,15 +27,15 @@ spec:
           tcpSocket:
             port: 6379
           initialDelaySeconds: 10
-        resources:
-          limits:
-            cpu: "0.1"
+        #resources:
+        #  limits:
+        #    cpu: "0.1"
         volumeMounts:
           - name: redis-persistent-storage
             mountPath: /var/redis/6379
       imagePullSecrets:
-      - name: registry.chenliujin.com
+      - name: docker.io 
       nodeSelector: 
-        node: k2 
+        node: redis 
 
 
