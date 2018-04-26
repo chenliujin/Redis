@@ -1,4 +1,4 @@
-FROM redis:4.0.1
+FROM redis:4.0.9
 
 MAINTAINER chenliujin <liujin.chen@qq.com>
 
